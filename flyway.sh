@@ -1,0 +1,1 @@
+flyway -url=jdbc:postgresql://$1:$2/$3 -user=$4 -locations=filesystem:migration_scripts -ignoreMissingMigrations=true -outOfOrder=true -schemas=public migrate

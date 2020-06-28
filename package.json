@@ -1,0 +1,40 @@
+{
+  "name": "blackswan-test-api",
+  "version": "1.0.0",
+  "description": "A Backswan test api.",
+  "main": "dist/index.js",
+  "repository": "https://github.com/chynamyerz/blackswan-test-api.git",
+  "author": "Sifiso <myezasifiso11@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": " export DEBUG=\"nodemon\"; nodemon -e ts -x ts-node -r dotenv/config api/index.ts",
+    "format": "prettier --write '{*.json,api/**/*.{ts,json,sql}}'",
+    "lint": "tslint 'api/**/*.{ts,json,md,sql}'",
+    "lint:fix": "tslint --fix 'api/**/*.{ts,json,md,sql}'"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.6",
+    "@types/node": "^14.0.14",
+    "@types/node-cron": "^2.0.3",
+    "@types/pg": "^7.14.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "node-cron": "^2.0.3",
+    "nodemon": "^2.0.4",
+    "pg": "^8.2.1",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.5"
+  },
+  "lint-staged": {
+    "{package.json,api/**/*.{ts,json,md,sql}}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

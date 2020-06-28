@@ -1,0 +1,19 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# misc
+*.env
+
+# IDE
+.idea
+
+# VSCode
+.vscode
+
+# yarn error log
+yarn-error.log
